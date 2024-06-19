@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+:root{
+    /* Fonts */
+    --main-font: "Lexend Deca", sans-serif;
+    --header-font: "Big Shoulders Display" , sans-serif;
+
+    /* Font-Color */
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+
+    /* Padding */
+    --card-padding: 2em;
+
+    /* Width*/
+    --min-width: 320px;
+
+
+    /* Background Color */
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+}
+
+body{
+    /* General Styling */
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: var(--white);
+    /* Background */
+    background-color: var(--gray);
+    /* Position */
+}
+
+h1{
+    color: var(--gray);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+}
+
+
+.container{
+    margin: var(--card-padding);
+    padding: 0 var(--card-padding);
+}
+
+.container p,
+.container a {
+    font-size: 12px;
+}
+
+.card{
+    min-width: 250px;
+    padding: 2em;
+}
+
+.learn-link {
+    display: inline-block;
+    border: 2px solid var(--gray);
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 1.5em 0 1em 0;
+    background-color: var(--gray);
+    padding: 0.75em 2em;
+    color: transparent;
+}
+
+.learn-link:hover,
+.learn-link:focus{
+    border: 2px solid var(--gray);
+    background-color: inherit;
+    color: inherit;
+}
+
+
+.sedans{
+    border-radius: 5px 5px 0 0 ;
+    background-color: var(--orange);
+}
+
+.sedans a{
+    color: var(--orange);
+}
+
+.suvs{
+    background-color: var(--cyan);
+}
+
+.suvs a {
+    color: var(--cyan);
+}
+
+.luxury{
+    background-color: var(--dark-cyan);
+    border-radius: 0 0 5px 5px;
+}
+
+.luxury a{
+    color: var(--dark-cyan);
+}
+
+@media screen and (min-width:600px){
+    body{
+        height: 100vh;
+        place-content: center;
+    }
+        .container{
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .card{
+            padding: 2.5em;
+            max-width: 312px;
+        }
+
+        .card p {
+            font-size: 15px;
+            padding: 1em 1em 0 0;
+        }
+
+        .learn-link{
+            margin-top: 6em;
+        }
+
+        .sedans{
+            border-radius: 5px 0 0 5px;
+        }
+
+        .luxury{
+            border-radius: 0 5px 5px 0;
+        }
+
+
+}
